@@ -1,4 +1,15 @@
 <!--Titulos-->
+# Markdown
+
+```
+# Titulo h1
+## Titulo h2
+### Titulo h3
+#### Titulo h4
+##### Titulo h5
+###### Titulo h6
+```
+
 # Titulo h1
 ## Titulo h2
 ### Titulo h3
@@ -6,34 +17,91 @@
 ##### Titulo h5
 ###### Titulo h6
 
-Texto en *Italica*
-Texto en **Negrita**
-Texto ~~Tachado~~
+## Formato texto
 
-#### Listas desordenadas
+```
+*Italica*
+**Negrita**
+~~Tachado~~
+```
+
+*Italica*
+**Negrita**
+~~Tachado~~
+
+
+## Listas desordenadas
+
+```
+* un item
+    * sub item
+* otro item
+* otro mas
+```
+
 * un item
     * sub item
 * otro item
 * otro mas
 
-#### Lista ordenada
+## Lista ordenada
 
+```
+1. primer item
+    1. un sub item
+2. segundo item
+3. tercer item
+```
 1. primer item
     1. un sub item
 2. segundo item
 3. tercer item
 
-#### Enlaces
+## Enlaces
+
+` [Google](http://www.google.com)`
+
 [Google](http://www.google.com)
 
-> Cita en  mardown
-#### Una linea divisoria
+## Citas
+
+```
+> Cita en  markdown
+```
+
+> Cita en  markdown
+
+## Una linea divisoria
+
+```
 --- 
+
 ___
 
-#### Codigo de una sola linea
+```
+
+--- 
+
+___
+
+## Codigo de una sola linea
+
+```
 ` console.log("Una linea de codigo")`
-#### Codigo multilinea
+```
+
+` console.log("Una linea de codigo")`
+
+## Codigo multilinea
+
+> \```go
+packge main
+> func main(){
+    println("Hola Go")
+}
+> \```
+
+
 ```go
 packge main
 
@@ -43,34 +111,68 @@ func main(){
 
 ```
 
-#### Tabla
-|Titutlo1   |Titulo2    |Titulo3    |
-|-----------|:-----------:|-----------:|
-|Elemento1  |Elemento2  |Elemento3  |
-|*Elemento4*  |`Elemento5 ` |Elemento6  |
+## Tabla
 
-#### Cargando imagenes
-##### Logo de enlace web
+```
+|Titutlo1   |Titulo2     |Titulo3    |
+|-----------|:-----------|-----------|
+|Elemento1  |Elemento2   |Elemento3  |
+|*Elemento4*|`Elemento5 `|Elemento6  |
+```
+
+|Titutlo1   |Titulo2     |Titulo3    |
+|-----------|:-----------|-----------|
+|Elemento1  |Elemento2   |Elemento3  |
+|*Elemento4*|`Elemento5 `|Elemento6  |
+
+## Imagenes
+
+### Logo de enlace web
+
+` ![Logo de google de enlace web](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)
+`
+
 ![Logo de google de enlace web](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)
 
-##### Logo de imagen local
+### Logo de imagen local
+
+` ![Logo de google de imagen local](googlelogo.png) `
+
 ![Logo de google de imagen local](googlelogo.png)
 
-#### Check en github
+## Check en github
+
+```
+* [x] Tarea 1
+* [x] Tarea 2
+* [ ] Tarea 3
+* [ ] Tarea 4
+```
+
 * [x] Tarea 1
 * [x] Tarea 2
 * [ ] Tarea 3
 * [ ] Tarea 4
 
-#### Emojis en github
+## Emojis en github
+
+```
+:smile:
+:stuck_out_tongue:
+```
+
+
 :smile:
 :stuck_out_tongue:
 
-#### Video en github
+## Video en github
+
+` [![IMAGE ALT TEXT HERE](video.PNG)](https://www.youtube.com/watch?v=D8-YSqAoxD4) `
+
 [![IMAGE ALT TEXT HERE](video.PNG)](https://www.youtube.com/watch?v=D8-YSqAoxD4)
 
 
-#### Diagramas Plantuml
+## Diagramas Plantuml
 
 ````
 class Object{
@@ -130,7 +232,7 @@ endif
 stop
 ```
 
-#### Formulas
+## Formulas
 
 ` $$\int_{-\infty}^\infty e^{-x^2} = \sqrt{\pi}$$ `
 

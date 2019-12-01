@@ -1,9 +1,8 @@
 
-#Errores en GO 
+# Errores en GO
 
 En go no existe excepciones como en otros lenguajes como c++, java, C#, ... etc. 
  El manejo de errores en go se realiza sin sobrecargar el valor del retorno.
-
 
 ```go
 // implementar esta interfaz
@@ -13,7 +12,8 @@ type error interface {
 
 ```
 
-#### ¿Como manejar el error?
+## Como se manejan los  errores
+
 * verificar si devuelve un error o no *if err!=nil {...}*
 Un ejemplo de como usar:
 
@@ -30,7 +30,8 @@ func main(){
 }
 ```
 
-#### Printing y Logging
+### Printing y Logging
+
 Opciones para imprimir o hacer logging de un error:
 * ` fmt.Println() // imprime el mensaje del error`
 * ` log.Println() // se guarda en un log el error`
@@ -38,7 +39,8 @@ Opciones para imprimir o hacer logging de un error:
 * ` log.Panicln() // se pueden usar funciones diferidad y "recover" `
 * ` panic() // `
 
-##### Uso de:  ` fmt.Println()` y ` log.Println()`
+##### Uso de:  ` fmt.Println()` y ` log.Println()`.
+
 ```go
 func main(){
     _,err := os.Open("archivo.txt")
@@ -48,7 +50,7 @@ func main(){
     }
 }
 ```
-###### Definiendo el archivo de salida para el log
+##### Definiendo el archivo de salida para el log
 ```go
 func main(){
     f,err := os.Create("log.txt")
@@ -98,7 +100,9 @@ func main(){
 ```
 
 #### Defer, Panic y Recover
+
 ##### Reglas del Defer
+
 1. **Defer** es evaluado cuando en el momento que es leido la linea donde se declaró.
 
 ```go
@@ -109,6 +113,7 @@ func a(){
     return
 }
 ```
+
 2. **Defer** funciona como una pila, el ultimo que entra es el primero que sale.
 
 ```go
@@ -119,6 +124,7 @@ func b(){
     // por consola saldrá:3210
 }
 ```
+
 3. **Defer**  se ejecuta luego del return de la funcion.
 
 ```go
@@ -181,6 +187,7 @@ func g() {
 // Retorna de manera normal desde f
 
 ```
+
 #### Info, personalizando los errores
 
 Agregamos información a nuestros errores con: **errors.New()**
@@ -189,7 +196,7 @@ Agregamos información a nuestros errores con: **errors.New()**
 * %T -> tipo
 .....
 
-##### Personalizando el error
+#### Personalizando el error
 
 ```go
 func main() {
@@ -209,7 +216,7 @@ func sqrt(f float64) (float64, error) {
 
 ```
 
-##### Implementando la interfaz Error
+#### Implementando la interfaz Error
 
 ```go
 type ubicacionError struct {

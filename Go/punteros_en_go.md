@@ -60,5 +60,3 @@ func porReferencia(n *int) {
 
 * Si el receptor es de tipo `(t T)` entonces se puede pasar valores `T y *T`.
 * Si el receptor es de tipo `(t *T)` entonces solo se puede pasar valores de tipo `*T`.
-
-
