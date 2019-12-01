@@ -69,3 +69,69 @@ func main(){
 #### Video en github
 [![IMAGE ALT TEXT HERE](video.PNG)](https://www.youtube.com/watch?v=D8-YSqAoxD4)
 
+
+#### Diagramas Plantuml
+
+````
+class Object{
+    equals()
+}
+class ArrayList {
+    Object[] elementData
+    sizeHI
+    toString()
+}
+Object<|--ArrayList
+````
+
+```plantuml
+class Object{
+    equals()
+}
+class ArrayList {
+    Object[] elementData
+    sizeHI
+    toString()
+}
+Object<|--ArrayList
+```
+
+```
+start
+if (condition A) then (yes)
+  :Text 1;
+elseif (condition B) then (yes)
+  :Text 2;
+  stop
+elseif (condition C) then (yes)
+  :Text 3;
+elseif (condition D) then (yes)
+  :Text 4;
+else (nothing)
+  :Text else;
+endif
+stop
+```
+
+```plantuml
+start
+if (condition A) then (yes)
+  :Text 1;
+elseif (condition B) then (yes)
+  :Text 2;
+  stop
+elseif (condition C) then (yes)
+  :Text 3;
+elseif (condition D) then (yes)
+  :Text 4;
+else (nothing)
+  :Text else;
+endif
+stop
+```
+
+#### Formulas
+
+` $$\int_{-\infty}^\infty e^{-x^2} = \sqrt{\pi}$$ `
+
+$$\int_{-\infty}^\infty e^{-x^2} = \sqrt{\pi}$$

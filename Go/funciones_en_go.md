@@ -33,7 +33,7 @@ func (p persona) presentarse() {
 }
 // sePresenta, puede recibir al tipo agenteSecreto o persona los cuales implementan la interfaz humano
 func sePresenta(h humano) {
-    h.presentar()
+    h.presentarse()
 }
 
 func main() {
@@ -54,7 +54,40 @@ func main() {
     sePresenta(as)// se ejecutara la funcion presentarse() del agenteSecreto
 }
 
+```
+#### Conversion de Tipos y Afirmación
 
+##### Conversion:
+```go
+type myEntero int
+
+func main {
+    var x myEntero = 20
+    fmt.Println(x) // 20
+    fmt.Printf("%T", x) // main.myEntero
+    var y int
+    y = int(x) // se realiza la conversion si asigno directamente y = x da error
+    fmt.Println(y) // 20
+    fmt.Printf("%T", y) // main.int
+}
+```
+##### Afirmación:
+
+```go
+...
+// Todo igual al primer caso con excepcion de sePresenta
+func sePresenta(h humano) {
+    switch h.(type) {
+        case persona:
+            fmt.Println("Pasado por la función sePresenta", h.(persona).nombre) 
+            // afirmo al compilador que es del tipo persona y por tanto tiene un atributo nombre
+        case agenteSecreto:
+            fmt.Println("Pasado por la función sePresenta", h.(agenteSecreto).nombre) 
+            // afirmo al compilador que es del tipo agenteSecreto y por tanto tiene un atributo nombre
+    }
+}
+...
 
 ```
+
 
